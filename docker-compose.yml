@@ -1,0 +1,34 @@
+services:
+  orderapi:
+    image: ${DOCKER_REGISTRY-}orderapi
+    build:
+      context: .
+      dockerfile: OrderAPI/Dockerfile
+
+  productapi:
+    image: ${DOCKER_REGISTRY-}productapi
+    build:
+      context: .
+      dockerfile: ProductAPI/Dockerfile
+
+
+  promotionsapi:
+    image: ${DOCKER_REGISTRY-}promotionsapi
+    build:
+      context: .
+      dockerfile: PromotionsAPI/Dockerfile
+
+
+  reviewsapi:
+    image: ${DOCKER_REGISTRY-}reviewsapi
+    build:
+      context: .
+      dockerfile: ReviewsAPI/Dockerfile
+
+
+  shippingapi:
+    image: ${DOCKER_REGISTRY-}shippingapi
+    build:
+      context: .
+      dockerfile: ShippingAPI/Dockerfile
+
